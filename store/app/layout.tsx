@@ -1,11 +1,12 @@
-import { Footer, Navbar } from '@/components'
 import './globals.css'
+
+import { Footer, Navbar } from '@/components'
 import type { Metadata } from 'next'
 import { Urbanist } from 'next/font/google'
 import ModalProvider from '@/providers/modal-provider'
 import ToastProvider from '@/providers/toast-provider'
 
-const urban = Urbanist({ subsets: ['latin'] })
+const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Store',
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urban.className}>
+      <body className={font.className}>
         <ModalProvider />
         <ToastProvider />
         <Navbar />
